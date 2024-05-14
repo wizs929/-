@@ -12,6 +12,10 @@
             padding: 0;
             scroll-behavior: smooth;
         }
+        a{
+            text-decoration: none;
+        }
+
     </style>
 </head>
 <body background="./图片/背景图.png"
@@ -19,34 +23,45 @@
     background-attachment: fixed;
     background-size: 100% 100%;">
     <div class="header">
-        <div style="width: 15%;text-align: start;">
+        <div style="position:absolute;left: 0;">
             <div class="name" style="font-family: '华文行楷';font-size: 30px;">览风土</div>
         </div>
         
+        
         <div class="menu">
-            <img src="./导航栏icon图标/主页.ico" style="height: 60px; width: auto;" class="top1">
-            <span class="headtext" style="color: brown;">首页</span>
+            <img src="./图片/首页.svg" style="height: 40px; width: auto;" class="top1">
+            <a href="#firstpage"><span class="headtext" >首页</span></a>
         </div>
+        
+        <span style="font-size: 20px;color: brown;">|</span>
+        
+        
         <div class="menu">
-            <span style="font-size: 20px;color: brown;">|</span>
             <img src="./导航栏icon图标/可视化.ico" style="height: 70px; width: auto;">
-            <span class="headtext">民俗可视化</span>
+            <a href="#visiblepage"><span class="headtext">民俗可视化</span></a>
         </div>
-        <div class="menu">
-            <span style="font-size: 20px;color: grey;">|</span>
-            <img src="./导航栏icon图标/地图.ico" style="height: 70px; width: auto;">
-            <span class="headtext">民俗地图</span>
-        </div>
-        <div class="menu">
-            <span style="font-size: 20px;color: grey;">|</span>
-            <img src="./导航栏icon图标/产品.ico" style="height: 70px; width: auto;">
-            <span class="headtext">特色产品</span>
-        </div>
-        <div class="menu">
-            <span style="font-size: 20px;color: grey;">|</span>
-            <img src="./导航栏icon图标/关于我们.ico" style="height: 60px; width: auto;">
-            <span class="headtext">关于我们</span>
-        </div>   
+        <span style="font-size: 20px;color: grey;">|</span>
+        
+            <div class="menu">
+                <img src="./导航栏icon图标/地图.ico" style="height: 70px; width: auto;">
+                <a href="#map-section"><span class="headtext">民俗地图</span></a>
+            </div>
+        
+        <span style="font-size: 20px;color: grey;">|</span>
+        
+        
+            <div class="menu">
+                <img src="./导航栏icon图标/产品.ico" style="height: 70px; width: auto;">
+                <a href="#productpage"><span class="headtext">特色产品</span></a>
+            </div>
+        
+        <span style="font-size: 20px;color: grey;">|</span>
+        
+        
+            <div class="menu">
+                <img src="./导航栏icon图标/关于我们.ico" style="height: 60px; width: auto;">
+                <a href="#aboutpage"><span class="headtext">关于我们</span></a>
+            </div>   
     </div>
     <script>
         var long=innerHeight
@@ -54,20 +69,11 @@
             window.scrollTo(0,0)
         }
     </script>
-    <div class="homepage">
+    <div class="homepage"  id="firstpage">
         <img src="./首页.png" style="width: 100%;">
     </div>
 
-    <div class="media" >
-        <div class="text2" style="margin-left: 5.5rem;">
-            Folk Video
-        </div>
-        <p style="font-size: 3rem;color: #a3083f;text-align: left;margin-left: 5.5rem;margin-bottom: 3rem;">民俗文化访谈</p>
-        <video  controls>
-            <source src="https://cloud.tiaozhan.com/f/qjhX/4ff3ad810a6b6045106771bce87b238b.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+    
     <div class="introduction">
         <div class="text1">
             <p>Platform Introduction</p>
@@ -76,15 +82,15 @@
         
         <div style="width: 40%;display: flex;flex-direction: column;">
             <div class="pictures">
-                <img src="./图片/口弦.png" alt="" class="pictures_img">
+                <img src="./图片/图片1.png" alt="" class="pictures_img">
                 <div class="inside">
-                    <span class="word">&nbsp;口弦  >>>  </span>
+                    <a href="./page1.html"><span class="word">&nbsp;固原砖雕  >>>  </span></a>
                 </div>
             </div>
             <div class="pictures">
-                <img src="./图片/何家棍.png" alt="" class="pictures_img">
+                <img src="./图片/2-1.png" alt="" class="pictures_img">
                 <div class="inside">
-                    <span class="word">&nbsp;何家棍  >>>  </span>
+                    <a href="./page2.html"><span class="word">&nbsp;回乡刺绣  >>>  </span></a>
                 </div>
             </div>
         </div>
@@ -93,21 +99,34 @@
             古时的烈风只带起散落的诗句，而今日我们在互联网的快车道上，立足西北大地的独特民俗文化，通过数据搜集、数据库搭建、访谈调研搜集陕甘宁县域民俗文化资料，运用可视化呈现的方式将生动热烈的民俗文化铺展，巧借创新活水，为民俗文化传播赋能。
         </div>
     </div>
-    <div class="visible">
+    <div class="visible" id="visiblepage">
         <div class="text2">
             <p>Folk Visualisation</p>
         </div>
         <p style="font-size: 3rem;color: #a3083f;margin-left: 4rem;">民俗可视化</p>
-        <div class="visualisation">
-            <div style="width: 40%;margin-left: 5%;margin-top: 3%;">
-                <img src="./图片/可视化1.png">
+        <div class="visualcard">
+            <div class="visualisation">
+                <div style="width: 50%;margin-top: 3%;">
+                    <img src="./图片/可视化1.png">
+                </div>
+                <div style="width: 100%;margin-left: 9%;margin-top: 2rem;">
+                    <div class="flourish-embed flourish-parliament" data-src="visualisation/15847857"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                </div>
+                <div style="width: 100%;margin-top: 2rem;">
+                    <div class="flourish-embed flourish-hierarchy" data-src="visualisation/15847975"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                </div>
             </div>
-            <div style="width: 40%;margin-left: 5%;">
-                <div class="flourish-embed flourish-parliament" data-src="visualisation/15847857"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-            </div>
-        </div>
-        <div style="width: 100%;">
-            <div class="flourish-embed flourish-hierarchy" data-src="visualisation/15847975"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+            <div class="words">
+                <div class="word_1">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们对收集到的陕甘宁民俗文化数据进行了可视化的数据分析，从左图一的词云图可以看出，陕甘宁地区特色民俗文化种类繁多、形式多样，不仅包括手工艺品、美食、传统节日，还包括了建筑、音乐、服饰等等，十分具有传承意义。
+                </div>
+                <div class="word_1">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;左图二是对收集到的民俗文化数据进行的分类统计。我们对其进行分类，共有20类民俗文化，涵盖了衣食住行多个方面，其中工商业特色民俗较多，共有55个；饮食方面次之，共有28个。其他具体数据都在途中有所体现。
+                </div>
+                <div class="word_1">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;左图三是对甘肃省民俗文化汇总的树状图，一级分支为地级市，二级分支是区县，数字代表此区县共有多少种特色民俗。
+                </div>
+            </div> 
         </div>
     </div>
 
@@ -141,13 +160,13 @@
                     </div>
                     <div class="card">
                         <div class="side">
-                            <span>>>><span>
+                            <a href="./page4.html" style="color: white;"><span>>>><span></a>
                         </div>
-                        <img src="./图片/八宝茶.jpeg" style="position: absolute;top: -5%;left: -10%;width: 100%;transition: all .5s;" class="cardimg">
+                        <img src="./图片/4-3.jpeg" style="height:120%;position: absolute;top: -5%;left: -10%;width: 100%;transition: all .5s;" class="cardimg">
                     </div>
                     <div class="card">
                         <div class="side">
-                            <span>>>><span>
+                            <a href="./page3.html" style="color: white;"><span>>>><span></a>
                         </div>
                         <img src="./图片/石嘴山刺绣.png" style="position: absolute;top: 0;left: -20%;height: 100%;transition: all .5s;" class="cardimg">
                     </div>
@@ -168,7 +187,7 @@
             padding: 0;
         }
     </style>
-    <div class="production">
+    <div class="production" id="productpage">
         <div class="text2">
             <p>Featured</p>
             
@@ -177,21 +196,28 @@
         <p style="font-size: 3rem;color: #a3083f;margin-left: 4rem;">特色产品</p>    
         <div class="productioncard">
             <div class="productcard">
-                <img src="./图片/八宝茶.webp" alt="" class="production_img">
+                <div class="production_img">
+                    <img src="./图片/八宝茶.webp" alt="">
+                </div>
+                
                 <div class="inside2">
                     <span class="word">八宝茶</span>
                     <div class="word2">了解详情</div>
                 </div>
             </div>
             <div class="productcard">
-                <img src="./图片/枸杞.jpeg" alt="" class="production_img">
+                <div class="production_img"> <img src="./图片/枸杞.jpeg" alt="" ></div>
+               
                 <div class="inside2">
                     <span class="word">中宁枸杞</span>
                     <div class="word2">了解详情</div>
                 </div>
             </div>
             <div class="productcard">
-                <img src="./图片/灰枣.jpg" alt="" class="production_img">
+                <div class="production_img">
+                    <img src="./图片/灰枣.jpg" alt="">
+
+                </div>
                 <div class="inside2">
                     <span class="word">灰枣</span>
                     <div class="word2">了解详情</div>
@@ -199,7 +225,19 @@
             </div>
         </div>
     </div>
-    <div class="about">
+
+    <div class="media" >
+        <div class="text2">
+            Folk Video
+        </div>
+        <p style="font-size: 3rem;color: #a3083f;text-align: left;margin-left: 64px;margin-bottom: 3rem;">民俗文化访谈</p>
+        <video  controls>
+            <source src="https://cloud.tiaozhan.com/f/qjhX/4ff3ad810a6b6045106771bce87b238b.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="about" id="aboutpage">
         <div class="text2">
             <p>About us</p>
         </div>
